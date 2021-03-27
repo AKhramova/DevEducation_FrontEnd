@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    font-size: 20px;
+}
+main{
+    width: 40%;
+    height: 70vh;
+    background: lightcoral;
+    margin: 10% auto auto auto;
+    border: 10px solid rgb(226, 83, 83);
+}
+div{
+    display: inline-block;
+    margin: 2%;
+}
+button, label{
+    display: block;
+}
+button{
+    margin: 3% ;
+    border-radius: 10%;
+}
+button:hover{
+    background: indigo;
+}
+.div-bg, .setting{ 
+    float: left;
+    width: auto;
+    height: auto;
+}
