@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="block-background">
+    <div class="block-background__container-content content">
+            <label class="content__name-game">RANDOMIZER</label>
+            <label class="content__name-min">Min</label>
+            <input type="number" class="content__number-min" oninput="checkFloatInput(this)">
+            <label class="content__name-max">Max</label>
+            <input type="number" class="content__number-max" oninput="checkFloatInput(this)">
+            <button type="button" class="content__generate">Generate</button>
+             <label class="content__answer"></label>
+            <button class="content__reset" onclick="refreshPage()">Reset</button>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
