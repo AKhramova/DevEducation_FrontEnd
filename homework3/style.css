@@ -1,30 +1,35 @@
-*{
-    margin: 0;
-    font-size: 20px;
+.body-container,.data__name-action,.data__hints, .data__text-finally,
+.setting__name-action, .setting__name-min, .setting__name-max{
+    display: flex;
+    justify-content: center;
 }
-main{
-    width: 40%;
-    height: 70vh;
+.body-container__main{
+    width: 30%;
     background: lightcoral;
-    margin: 10% auto auto auto;
+    margin: 10% auto;
     border: 10px solid rgb(226, 83, 83);
 }
-div{
-    display: inline-block;
-    margin: 2%;
+.data__answer, .data__generate, .data__exit,
+.setting__attemps, .setting__min-value, .setting__max-value, .setting__change{
+    display: flex;
+    margin: 15px auto;
 }
-button, label{
-    display: block;
+.data__text-start,.data__hints, .data__text-finally{
+    max-width: 90%;
+    margin: 1% auto;
 }
-button{
-    margin: 3% ;
-    border-radius: 10%;
+.data__generate:hover, .data__exit:hover,.setting__change:hover{
+    box-shadow: 1px 2px 3px black;
 }
-button:hover{
-    background: indigo;
+.data__generate:disabled{
+    background: rgb(228, 225, 225);
 }
-.div-bg, .setting{ 
-    float: left;
-    width: auto;
-    height: auto;
+.data__answer{
+    border: 2px solid gray;
+}
+.setting__min-value{
+    border: 2px solid rgb(207, 100, 100);
+}
+.data__answer:focus, .setting__attemps:focus, .setting__min-value:focus, .setting__max-value:focus{
+    outline:  2px solid rgb(226, 83, 66);
 }

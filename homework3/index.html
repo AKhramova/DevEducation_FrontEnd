@@ -6,27 +6,28 @@
     <title>Homework 3</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <main class="main-bg">
-        <div class="div-bg">
-            <label>Введите число</label>
-            <input type="number" id="answer" class="answer" placeholder=" Введите любое число">
-            <button type="submit" class="generate">GENERATE</button>
-            <button type="submit" class="exit" onclick="refreshPage()">EXIT</button>
-            <p class="text-start"></p>
-            <p class="hints"></p>
-            <p class="text-finally"></p>
+<body class="body-container">
+    <main class="body-container__main">
+        <div class="main__content data">
+            <label class="data__name-action">Введите число</label>
+            <input type="number" id="answer" class="data__answer" placeholder=" Введите любое число">
+            <button type="submit" class="data__generate">GENERATE</button>
+            <button type="submit" class="data__exit" onclick="refreshPage()">EXIT</button>
+            <p class="data__text-start"></p>
+            <p class="data__hints"></p>
+            <p class="data__text-finally"></p>
         </div>
-        <div class="setting">
-            <label>Количество попыток</label>
-            <input type="number"  class="attemps" placeholder="от 1 до 15">
-            <label>Минимальное число</label>
-            <input type="number" class="minValue" placeholder="Больше 1">
-            <label>Максимальное число</label>
-            <input type="number" class="maxValue" placeholder="до 200">
-            <button type="submit" class="change">Change</button>
+        <div class="main__content setting">
+            <label class="setting__name-action">Количество попыток</label>
+            <input type="number" id="" class="setting__attemps" placeholder="от 1 до 15">
+            <label class="setting__name-min">Минимальное число</label>
+            <input type="number" id="answer" class="setting__min-value" placeholder="Больше 1">
+            <label class="setting__name-max">Максимальное число</label>
+            <input type="number" id="answer" class="setting__max-value" placeholder="до 200">
+            <button type="submit" class="setting__change">Change</button>
         </div>
     </main>
+    
     <script src="script.js"></script>
 </body>
 </html>
