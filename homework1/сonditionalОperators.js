@@ -1,82 +1,93 @@
 // 1.Если а – четное посчитать а*б, иначе а+б
-/*var a=6, b=6;
-if(a%2 === 0){
-    console.log(a*b);
+/*function result(a, b){
+  if(a%2 === 0){
+    return a*b;
+  } else return a + b;
+
 }
-else console.log(a+b);
-*/
+//console.log(result(1,6));
 
 //2.Определить какой четверти принадлежит точка с координатами (х,у)
-/*var x=prompt("Введите любое число x");
-var y=prompt("Введите любое число y");
-if((Number(x)>0) && (Number(y)>0)){
-console.log("1");
-}
-else if ((Number(x)<0) && (Number(y)>0)){
-    console.log("2");
-}
-else if((Number(x)<0) && (Number(y)<0)){
-    console.log("3");
-}
-else if((Number(x)>0) && (Number(y)<0)){
-    console.log("4");
-}
-else if ((Number(x) ===0) && (Number(x) === 0)){
-    console.log("Начало координат");
-}*/
 
-//3.Найти суммы только положительных из трех чисел
-/*var a=-1, b=-1, c=3, result=0;
-if(a>0){
-    result+=a;
-}
-else result=result;
-if(b>0){
-    result+=b;
-}
-else result=result;
-if(c>0){
-    result+=c;
-}
-else result=result;
-console.log(result);*/
-
-//4.Посчитать выражение (макс(а*б*с, а+б+с))+3
-/*var a=-2, b=2, c=3;
-var summa=a+b+c;
-var multiplication=a*b*c;
-var max=0;
-if(multiplication>summa){
-  max=multiplication+3
-  console.log("max: " + max);
-} else {
-  max=summa+3;
-  console.log(max);
-}*/
-
-//5.Написать программу определения оценки студента по его рейтингу ...
-/*var x=prompt("0-100: " );
-if(x>0){
-  switch (true){
-    case x>=0 && x<=19 :
-      console.log("F"); 
-      break;
-    case x>=20 && x<=39:
-      console.log("E"); 
-      break;
-    case x>=40 && x<=59:
-      console.log("D"); 
-      break;
-    case x>=60 && x<=74:
-      console.log("C"); 
-      break;
-    case x>=75 && x<=89:
-      console.log("B"); 
-      break;
-    case x>=90 && x<=100:
-      console.log("A"); 
-      break; 
+function  coordinates(x, y){
+  if( x === 0 && y === 0){
+    return "Начало координат";
+  }
+  if( x > 0 && y > 0){
+    return 1;
+  }
+  if( x < 0 && y > 0){
+    return 2;
+  }
+  if( x < 0 && y< 00){
+    return 3;
+  }
+  if( x > 0 && y < 0){
+    return 4;
   }
 }
-else console.log("Введите от 0 до 100");
-*/
+/*console.log(coordinates(0, 0));
+console.log(coordinates(3, 4));
+console.log(coordinates(-3, 4));
+console.log(coordinates(3, -4));
+console.log(coordinates(-3, -4));*/
+
+//3.Найти суммы только положительных из трех чисел
+/*function sum(a, b, c){
+  var result = 0;
+  if( a > 0){
+    result += a;
+  } 
+  if( b > 0){
+    result += b;
+  }
+  if( c > 0){
+    result += c;
+  }
+  return result;
+
+}
+console.log(sum(-1, -3, -7));*/
+
+//4.Посчитать выражение (макс(а*б*с, а+б+с))+3
+
+/*function maxMin(a, b, c){
+  var summa = a + b + c;
+  var multiplication = a*b*c;
+  var max=0;
+  if(multiplication > summa ){
+    max = multiplication +3;
+  } else max = summa + 3;
+  return max;
+
+}
+console.log(maxMin(-2, 2, 3));*/
+
+//5.Написать программу определения оценки студента по его рейтингу ...
+
+/*function grade(number){
+  if( number >= 0 && number <= 19){
+    return "F";
+  }
+  if( number >= 20 && number <= 39){
+    return "E";
+  }
+  if( number >= 40 && number <= 59){
+    return "D";
+  }
+  if( number >= 60 && number <= 74){
+    return "C";
+  }
+  if( number >= 75 && number <= 89){
+    return "B";
+  }
+  if( number >= 90 && number <= 100){
+    return "A";
+  }
+}
+grade(5);
+grade(25);
+grade(45);
+grade(65);
+grade(85);
+grade(95);*/
