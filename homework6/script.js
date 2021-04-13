@@ -1,16 +1,16 @@
 //1
-/*function getCookingTime (eggsAmount) {
+function getCookingTime (eggsAmount) {
     var result;
     result = Math.ceil(eggsAmount/5)*5;
     return result;
 }
 getCookingTime(0); 
 getCookingTime(5); 
-getCookingTime(9); */
+getCookingTime(9); 
 
 
 //2
-/*function getNumber(array) {
+function getNumber(array) {
     var resultEven, resultOdd, count = 0;
     for (var i = 0; i < array.length; i++) {
         if (array[i] % 2 === 0) {
@@ -28,10 +28,10 @@ getCookingTime(9); */
     }
 }
 getNumber([1, 5, 7, 9, 15, 19, 777, -15, -11, 4, 9, 23, -17]);
-getNumber([0, 2, 8, -4, 0, -122, 13, -4, 28, 12]); */
+getNumber([0, 2, 8, -4, 0, -122, 13, -4, 28, 12]); 
 
 //3
-/*var arr = [{
+var arr = [{
     title: 'Some title1'
     }, {
     title: 'I like JS'
@@ -53,10 +53,10 @@ function findTitle(array, str) {
     }
     return result;
 }
-findTitle(arr, 'js'); */
+findTitle(arr, 'js'); 
 
 //4
-/*function countCharacters(string){
+function countCharacters(string){
     var result ={};
   for(var i=0; i < string.length; i++){
     if(!result[string[i]]){
@@ -69,11 +69,11 @@ findTitle(arr, 'js'); */
 }
 countCharacters("sparrow"); 
 countCharacters("aabcddeffge");
-(countCharacters("a 2ab !d");*/
+(countCharacters("a 2ab !d");
 
 //5
 
-/*function isPalindrome(number){
+function isPalindrome(number){
     var revers = "";
     var k = number;
     while(Math.floor(number)>0){
@@ -99,4 +99,3 @@ getNextPalindrome(99) //returns 101
 getNextPalindrome(132) // returns 141
 getNextPalindrome(888) // returns 898
 getNextPalindrome(999) // returns 1001
- */
