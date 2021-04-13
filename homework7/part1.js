@@ -1,6 +1,6 @@
 //Part1
 // 1
-function result(a, b){
+/*function result(a, b){
     if( typeof a !== 'number' || typeof b !== 'number'){
         return "not number"
     }
@@ -101,4 +101,4 @@ module.exports ={
   sum,
   maxMin,
   grade,
-}
+}*/

@@ -1,5 +1,5 @@
 //1
-function getDay(number){
+/*function getDay(number){
   var arr = ["Monday", "Thuesday", "Wednesday", "Thuersday", "Friday", "Saturday", "Sunday"];
   if( typeof number !== 'number') {
     return "only number"
@@ -122,4 +122,4 @@ module.exports = {
   distance,
   getString,
   fromString
-};
+};*/

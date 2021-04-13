@@ -1,6 +1,6 @@
 //Part2
 //1
-function summaQuantity(min, max){
+/*function summaQuantity(min, max){
     var result = '';
     var sum = 0, counter = 0;
     if( typeof min !== 'number' || typeof max !== 'number'){
@@ -127,4 +127,4 @@ module.exports = {
     factorialNumber,
     summa,
     reverseNumbers
-}
+}*/

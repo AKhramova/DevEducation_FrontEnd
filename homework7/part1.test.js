@@ -1,4 +1,4 @@
-var { 
+/*var { 
     result,
     coordinates,
     sum,
@@ -312,4 +312,4 @@ describe('Part1. Task5', function(){
     ])('testing %s with expected result neither %s nor %s nor %s nor %s nor %s', function(number, result) {
         expect(grade(number)).not.toBe(result)
     })
-})
+})*/
