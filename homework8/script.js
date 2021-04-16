@@ -128,14 +128,59 @@ var cache = function(){
     }
   }
 }
+
+
 var cachedFunc = cache(complexFunction);
 cachedFunc('foo', "bar");// foo bar
 cachedFunc('foo', "bar");//In cache: foo bar
 cachedFunc('foo', "baz");// foo baz
+
+function getSum(str1, str2) {
+  var sum = '', rememberNum = 0;
+  if (typeof str1 !== 'string' || typeof str2 !== 'string') {
+   return "Only string";
+  }
+  if(str1 % 1 !== 0 || str2 % 1 !== 0){
+    return "Only number in string";
+  }
+  if( str1 < 0 || str2 < 0){
+    return "only >= 0"
+  }
+  if (str2.length > str1.length) {
+    var temp = str1;
+    str1 = str2;
+    str2 = temp;
+  }
+  var secondNumber = str1.length - str2.length;
+  for (var i = str1.length - 1; i >= 0; i-- ){
+    if ( i < str1.length - str2.length ){
+      if ( +str1[i] + rememberNum >= 10 ){
+        sum += +str1[i] + rememberNum - 10;
+        rememberNum = 1;
+      } else {
+        sum += +str1[i] + rememberNum;
+        rememberNum = 0;
+      }
+    } else if ( +str1[i] + +str2[i - secondNumber] >= 10 ) {
+      sum += +str1[i] + +str2[i - secondNumber] - 10 + rememberNum;
+      rememberNum = 1;
+    } else {
+      sum += +str1[i] + +str2[i - secondNumber] + rememberNum;
+      rememberNum = 0;
+    }
+  }
+  if( rememberNum !== 0){
+   sum +=rememberNum;
+  } 
+  sum = sum.split('').reverse().join('');
+  return  sum;
+}
+
 module.exports ={
-  tickets,
+ tickets,
   getQuntityPostsByAuthor,
   cache,
   complexFunction,
   cachedFunc,
+  getSum
 }

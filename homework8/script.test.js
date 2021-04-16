@@ -4,6 +4,7 @@ var {
     cache,
     complexFunction,
     cachedFunc,
+    getSum
  } = require('./script');
 
 describe('Task1', function(){
@@ -154,5 +155,33 @@ describe('Task4', function(){
         ['foo', 'baz', 'In cache: foo bar'],
     ])('testing arguments %s %s with expected not result %s', function(arg1, arg2, result) {
         expect(cachedFunc(arg1, arg2)).not.toBe(result)
+    })
+})
+
+describe('Task2', function(){
+    it('cache should be defined', function(){
+        expect(getSum).toBeDefined();
+    })
+    it('cache should be function', function(){
+        expect(typeof getSum).toBe('function');
+    })
+    test.each([
+        [1, 'str', 'Only string'],
+        [1, [], 'Only string'],
+        ['str', 'str', 'Only number in string'],
+        ['-1', '-1', 'only >= 0'],
+        ['11111', '0', '11111'],
+        ['11111111111111111', '1', '11111111111111112'],
+    ])('testing arguments %s %s with expected result %s', function(arg1, arg2, result) {
+        expect(getSum(arg1, arg2)).toBe(result)
+    })
+    test.each([
+        [1, 'str', 'only >= 0', 'Only number in string', '11111', '11111111111111112'],
+        ['str', 'str', 'Only string', 'only >= 0', '11111', '11111111111111112'],
+        ['-1', '-1', 'Only string', 'Only number in string', '11111', '11111111111111112'],
+        ['11111', '0','Only string', 'Only number in string', 'only >= 0', '11111111111111112'],
+        ['11111111111111111', '1', 'Only string', 'Only number in string', 'only >= 0', '11111'],
+    ])('testing arguments %s %s with expected result %s nor %s nor %s nor %s', function(arg1, arg2, result) {
+        expect(getSum(arg1, arg2)).not.toBe(result)
     })
 })
