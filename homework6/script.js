@@ -8,7 +8,6 @@ getCookingTime(0);
 getCookingTime(5); 
 getCookingTime(9); 
 
-
 //2
 function getNumber(array) {
     var resultEven, resultOdd, count = 0;
