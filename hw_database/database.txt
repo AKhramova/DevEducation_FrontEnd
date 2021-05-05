@@ -1,0 +1,49 @@
+create table Street(id integer, name varchar(20));
+insert into Street(id, name) values(1, "пр. Правды");
+insert into Street(id, name) values(2, "проспект Мира");
+insert into Street(id, name) values(3, "ул. Доценка");
+SELECT * FROM Street;
+
+create table Person(id integer, FirstName varchar(20), LastName varchar(20), Age varchar(2), Id_Street integer);
+insert into Person(id, FirstName, LastName, Age, Id_Street) values(1, "Ання ", "Молнарченко", '19', null);
+insert into Person(id, FirstName, LastName, Age, Id_Street) values(2, "Леша", "Козиченко", '65', 1);
+insert into Person(id, FirstName, LastName, Age, Id_Street) values(3, "Борис", "Борись", '35', null);
+insert into Person(id, FirstName, LastName, Age, Id_Street) values(4, "Надежда", "Последняя", '42', 3);
+insert into Person(id, FirstName, LastName, Age, Id_Street) values(5, "Ольга", "Козиченко", '55', 1);
+insert into Person(id, FirstName, LastName, Age, Id_Street) values(6, "Рита", "Бобрик", '23', 2);
+insert into Person(id, FirstName, LastName, Age, Id_Street) values(7, "Илья", "Козиченко", '17', 1);
+SELECT * FROM Person;
+
+/*1.Вывести общее число жителей*/
+SELECT count(*) FROM Person;
+
+/*2.Вывести средний возраст жителей*/
+SELECT avg(Age) FROM Person;
+
+/*3.Вывести отсортированный по алфавиту список фамилий без повторений*/
+SELECT DISTINCT LastName FROM Person ORDER BY LastName;
+
+/*4.Вывести список фамилий, с указанием количества повторений этих фамилий в общем списке*/
+SELECT LastName, COUNT(*) FROM Person GROUP BY LastName;
+
+/*5.Вывести фамилии, которые содержат в середине букву «б»*/
+SELECT LastName FROM Person WHERE LastName LIKE '_%б%_' GROUP BY LastName;
+
+/*6.Вывести список «бомжей»*/
+SELECT * FROM Person WHERE Id_Street IS NULL;
+
+/*7.Вывести список несовершеннолетних, проживающих на проспекте Правды*/
+SELECT Person.* FROM Person JOIN Street ON Person.Id_Street = Street.id
+WHERE UPPER(Street.name) LIKE '%пр. Правды%' AND Person.age < 18;
+
+/*8.Вывести упорядоченный по алфавиту список всех улиц с указанием, сколько жильцов живёт на улице */
+SELECT name, COUNT(Person.id) FROM Street JOIN Person WHERE Street.id = Person.Id_Street GROUP BY Street.name ORDER BY name ASC;
+
+/*9.Вывести список улиц, название которых состоит из 6-ти букв*/
+SELECT name FROM Street WHERE name LIKE '______';
+
+/*10.Вывести список улиц с количеством жильцов на них меньше 3.*/
+SELECT Street.id, Street.name FROM Street JOIN Person ON Street.id = Person.Id_Street
+GROUP BY Street.id, Street.name
+HAVING COUNT(Person.id) < 3;
+
