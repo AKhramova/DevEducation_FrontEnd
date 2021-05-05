@@ -69,7 +69,7 @@ function countCharacters(string){
 }
 countCharacters("sparrow"); 
 countCharacters("aabcddeffge");
-(countCharacters("a 2ab !d");
+countCharacters("a 2ab !d");
 
 //5
 

@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   background: linear-gradient(#a2ef5c, #59f28a);
+   user-select: none;
+}
+input{
+    width: 100%;
+    height: 60px;
+    border: none;
+    font-size: 30px;
+    outline: none;
+    text-align: right;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 4px;
+}
+button{
+    border: none;
+}
+.container{
+    width: 600px;
+    margin: 10% auto;
+}
+.container__panel{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 4px;
+}
+.panel__item{
+    height: 67px;
+    background-color: #bffbdc;
+    display: flex;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.clear{
+    background-color: #b3f8bd;
+    grid-column: 5/7;
+}
+.left{
+    border-radius: 0 0  0 10px;
+}
+.right{
+    border-radius: 0 0 10px 0;
+
+}
+.math{
+    background-color: #f4ce63;
+}
