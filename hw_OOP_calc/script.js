@@ -72,7 +72,6 @@ Calculator.prototype.functionClick = function(event){
     }
     if(button.id === 'one-divide-x'){
        this.oneDivideNumber();
-
     }
 }
 
@@ -136,7 +135,6 @@ Calculator.prototype.addDecimal = function(float){
     }
 }
 
-//
 Calculator.prototype.withMath = function(event){
     var button = event.target;
     if(button.id === 'sin'){
@@ -179,6 +177,7 @@ Calculator.prototype.withMath = function(event){
         this.display.value = Math.exp(this.display.value);
     } 
 }
+
 Calculator.prototype.calcFactorial = function(){
     if(this.display.value >= 0 && this.display.value % 1 === 0){
         var result = 1;
@@ -190,25 +189,12 @@ Calculator.prototype.calcFactorial = function(){
         alert('Data is invalid');
     }
 }
+
 Calculator.prototype.oneDivideNumber = function(){
     this.display.value = 1/this.display.value;
 }
+
 window.addEventListener('DOMContentLoaded', function () {
     var calculator = new Calculator();
     calculator.addElements();
 });
-
-module.exports = {
-    addDOMElements: Calculator.prototype.addDOMElements,
-    addElements: Calculator.prototype.addElements,
-    functionClick: Calculator.prototype.functionClick,
-    addValues: Calculator.prototype.addValues,
-    addOperations: Calculator.prototype.addOperations,
-    clearField: Calculator.prototype.clearField,
-    delate: Calculator.prototype.delate,
-    changeSing: Calculator.prototype.changeSing,
-    addDecimal: Calculator.prototype.addDecimal,
-    withMath: Calculator.prototype.withMath,
-    calcFactorial: Calculator.prototype.calcFactorial,
-    oneDivideNumber: Calculator.prototype.oneDivideNumber,
-}
