@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery</title>
+</head>
+<link rel="stylesheet" href="./style/style.css">
+<body>
+    <div class="content">
+        <div class="content__block">
+            <button class="content__block--btn" id="open-btn">Show all</button>
+            <div class="content__block__photo">
+                <image class="content__block--main" id="mainPhoto"/>
+            </div>
+        </div>
+        <div class="content__scroll-photos" id="photos-block">
+            <img class="content__scroll-photos__block" src="images/beach.jpg" alt="beach" data-type="img">
+            <img class="content__scroll-photos__block" src="images/building.jpg" alt="building" data-type="img">
+            <img class="content__scroll-photos__block" src="images/lake.jpg" alt="lake" data-type="img">
+            <img class="content__scroll-photos__block" src="images/beach-and-sunset.jpg" alt="building" data-type="img">
+            <img class="content__scroll-photos__block" src="images/black-and-white.jpg" alt="building" data-type="img">
+            <img class="content__scroll-photos__block" src="images/lighthouse.jpg" alt="building" data-type="img">
+            <img class="content__scroll-photos__block" src="images/mountains.jpg" alt="building" data-type="img">
+            <img class="content__scroll-photos__block" src="images/road.jpg" alt="building" data-type="img">
+            <img class="content__scroll-photos__block" src="images/sea-and-mountains.jpg" alt="building" data-type="img">
+            <img class="content__scroll-photos__block" src="images/sky.jpg" alt="building" data-type="img">
+        </div>
+    </div>
+    <div class="content-slider" id="content-slider">
+        <div class="content-slider__block">
+            <button class="content-slider__block--close" id=close-btn>&#10006;</button>
+            <img class="content-slider__block--photo" id="slider">
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
