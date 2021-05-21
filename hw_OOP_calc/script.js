@@ -1,9 +1,9 @@
 var memoryCurrentNumber = 0,
-    memoryNewNumber = false,
-    memoryPedingOperation = '';
+memoryNewNumber = false,
+memoryPedingOperation = '';
 
 var Calculator = function(){
-    //...
+   
 }
 
 Calculator.prototype.addDOMElements = function(){
@@ -48,29 +48,29 @@ Calculator.prototype.addElements = function(){
 
 Calculator.prototype.functionClick = function(event){
     var button = event.target;
-    if(button.id === 'number'){ 
+    if(button.getAttribute('data-id') === 'number'){ 
         this.addValues(button.textContent);
     } 
-    if(button.id === 'operation'){ 
+    if(button.getAttribute('data-id') === 'operation'){ 
         localOperationMemory = this.display.value;
         this.addOperations(button.textContent);
     }
-    if(button.id === 'decimal'){
+    if(button.getAttribute('data-id') === 'decimal'){
         this.addDecimal(button.textContent);
     }
-    if(button.id === "clear"){
+    if(button.getAttribute('data-id') === "clear"){
         this.clearField();
     }
-    if(button.id === 'del'){
+    if(button.getAttribute('data-id') === 'del'){
         this.delate();
     }
-    if(button.id === 'sign-change'){
+    if(button.getAttribute('data-id') === 'sign-change'){
         this.changeSing();
     }
-    if(button.id === 'factorial'){
+    if(button.getAttribute('data-id') === 'factorial'){
         this.calcFactorial();
     }
-    if(button.id === 'one-divide-x'){
+    if(button.getAttribute('data-id') === 'one-divide-x'){
        this.oneDivideNumber();
     }
 }
@@ -137,43 +137,43 @@ Calculator.prototype.addDecimal = function(float){
 
 Calculator.prototype.withMath = function(event){
     var button = event.target;
-    if(button.id === 'sin'){
+    if(button.getAttribute('data-id') === 'sin'){
         this.display.value = Math.sin(this.display.value);
     }
-    if(button.id === 'cos'){
+    if(button.getAttribute('data-id') === 'cos'){
         this.display.value = Math.cos(this.display.value);
     }
-    if(button.id === 'tan'){
+    if(button.getAttribute('data-id') === 'tan'){
         this.display.value = Math.tan(this.display.value);
     }
-    if(button.id === 'pi'){
+    if(button.getAttribute('data-id') === 'pi'){
        this.display.value = Math.PI;
     }
-    if(button.id === 'ln'){
+    if(button.getAttribute('data-id') === 'ln'){
         this.display.value = Math.log(this.display.value);
     }
-    if(button.id === 'log'){
+    if(button.getAttribute('data-id') === 'log'){
         this.display.value = Math.log10(this.display.value);
     }
-    if(button.id === 'e'){
+    if(button.getAttribute('data-id') === 'e'){
         this.display.value = Math.E;
     }
-    if(button.id === 'square-degree'){
+    if(button.getAttribute('data-id') === 'square-degree'){
         this.display.value = Math.pow(this.display.value, 2);
     }
-    if(button.id === 'cube-degree'){
+    if(button.getAttribute('data-id') === 'cube-degree'){
         this.display.value = Math.pow(this.display.value, 3);
     }
-    if(button.id === 'ten-in-degree'){
+    if(button.getAttribute('data-id') === 'ten-in-degree'){
         this.display.value = Math.pow(10, this.display.value);
     }
-    if(button.id === 'root'){
+    if(button.getAttribute('data-id') === 'root'){
         this.display.value = Math.sqrt(this.display.value);
     }
-    if(button.id === 'module'){
+    if(button.getAttribute('data-id') === 'module'){
         this.display.value = Math.abs(this.display.value);
     }
-    if(button.id === 'exp'){
+    if(button.getAttribute('data-id') === 'exp'){
         this.display.value = Math.exp(this.display.value);
     } 
 }
