@@ -74,8 +74,7 @@ AList.prototype.set = function (value, index) {
 
 AList.prototype.get = function (index) {
     this.checkIndex(index);
-    return this.array[index];
-    
+    return this.array[index]; 
 }; 
 
 AList.prototype.remove = function (index) {
@@ -207,4 +206,5 @@ AList.prototype.print = function () {
        console.log(this.array[i]);
     }
 }; 
+
 module.exports = AList;
