@@ -1,4 +1,4 @@
-var IList = require('./Ilist');
+var IList = require('../Ilist');
 
 var AList = function(capacity){
     IList.call(this, capacity);
