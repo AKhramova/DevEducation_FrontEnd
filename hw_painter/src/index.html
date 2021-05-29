@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="block-main">
+        <div class="block-main__panel">
+            <div class="block-main__panel__block">
+                <label class="block-main__panel__block--name" for="color">Choose colors:</label>
+                <input class="block-main__panel__block--color" id="color" type="color" value="#3B5249" name="color">
+            </div>
+            <div class="block-main__panel__block__size">
+                <label class="block-main__panel__block--name" for="size">Choose size:</label>
+                <input class="block-main__panel__block--size" id="size" list="tickmarks" type="range" min="1" max="50" step="1" value="5" name="size">
+            </div>
+            <div class="block-main__panel__block__btn">
+                <button class="block-main__panel__block__btn--btn" id="save-btn-picture">Save as picture</button>
+                <button class="block-main__panel__block__btn--btn" id="save-btn-json">Save as json</button>
+                <button class="block-main__panel__block__btn--btn" id="clear-btn">Clear</button>
+            </div>
+        </div>
+        <canvas class="block-main__canvas" id="canvas"></canvas>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
